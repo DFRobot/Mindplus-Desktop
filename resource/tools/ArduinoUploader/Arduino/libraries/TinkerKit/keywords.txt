@@ -1,0 +1,79 @@
+#######################################
+# Syntax Coloring Map For swRTC
+####################################### 
+# Datatypes (KEYWORD1)
+#######################################
+
+TinkerKit	KEYWORD1
+TKLed	KEYWORD1
+TKButton	KEYWORD1
+TKTouchSensor	KEYWORD1
+TKTiltSensor	KEYWORD1
+TKPotentiometer	KEYWORD1
+TKThermistor	KEYWORD1
+TKLightSensor	KEYWORD1
+TKMosFet	KEYWORD1
+TKRelay		KEYWORD1
+TKJoystick	KEYWORD1
+TKHallSensor	KEYWORD1
+TKGyro	KEYWORD1 
+TKAccelerometer	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################	
+
+state	KEYWORD2
+set	KEYWORD2
+get	KEYWORD2
+on	KEYWORD2
+off	KEYWORD2
+blink	KEYWORD2
+getCelsius	KEYWORD2
+getFahrenheit	KEYWORD2
+toggle	KEYWORD2
+pressed	KEYWORD2
+held	KEYWORD2
+released	KEYWORD2
+brightness	KEYWORD2
+fade	KEYWORD2
+getXAxis	KEYWORD2
+getYAxis	KEYWORD2
+getXAxisRate	KEYWORD2
+getYAxisRate	KEYWORD2
+calibrate	KEYWORD2
+inclination	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+I0	LITERAL1
+I1	LITERAL1
+I2	LITERAL1
+I3	LITERAL1
+I4	LITERAL1
+I5	LITERAL1
+I6	LITERAL1
+I7	LITERAL1
+I8	LITERAL1
+I9	LITERAL1
+
+O0	LITERAL1
+O1	LITERAL1
+O2	LITERAL1
+O3	LITERAL1
+O4	LITERAL1
+O5	LITERAL1
+
+D13	LITERAL1
+D12	LITERAL1
+D8	LITERAL1
+D7	LITERAL1
+D4	LITERAL1
+D2	LITERAL1
+
+TK_MAX	LITERAL1
+TK_1X	LITERAL1
+TK_4X	LITERAL1
+NORTH	LITERAL1
+SOUTH	LITERAL1

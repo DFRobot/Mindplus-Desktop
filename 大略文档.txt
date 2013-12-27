@@ -1,0 +1,30 @@
+11-29
+目前问题集:
+	0. 修改parameter的时候没有更新
+			done, 没有关联对应的槽
+	1. 连线的起点移动的时候线段没有跟着动
+			done, 没有关联起点的偏移修正
+	2. 移动之后, 保存再加载,加载的内容没有进行更改
+			未处理
+	3. 关于所有存储起点, 终点的名字, 坐标, 以及类型的判断, 都要重构
+
+		一个组件应该能区分其全名, 也就是带各种下划线的带序号的(ItemName)
+		也应该区分其模块的类型, ItemType(Param, behavior, root)
+		有时候还需要更详细的类型区分, ItemTypeDetail(ParameterIn, ParameterOut, BehaviorIn, BehaviorOut, root)
+		为了不需要强转就知道其类型需要把上面的信息存储在基类(QGraphicsItem)data中
+
+	4. 保存的时候,不能再基于Name和pos了, 应该基于对象
+	5. Behavior链接Param是不能连接的
+
+未来计划:
+	1.颜色选择, 自定义的调色板
+		使用渐变, 然后用取色
+
+修改记录:
+	1. 连线的时候存储起点, 终点的对象作为连线数据, 而不是以前那样记录个起点名字和起点的坐标信息(对象中包含这些信息,并且有更准确的描述)
+			添加了对应的代码, 但是旧的代码没有删除
+
+	2. GraphicsItemBase中加入ItemType, ItemTypeDetail 与其相关的get,set方法还有init
+
+parameter的联线明天处理
+

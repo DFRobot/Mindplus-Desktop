@@ -1,0 +1,30 @@
+#######################################
+# Syntax Coloring Map For WeiBo
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+post	KEYWORD2
+repost	KEYWORD2
+atme	KEYWORD2
+
+return_data			KEYWORD2
+json_length			KEYWORD2
+value_length		KEYWORD2
+value_pointer		KEYWORD2
+compare_strings		KEYWORD2
+compare_ids			KEYWORD2
+find_substring		KEYWORD2
+
+printProgStr		KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+LIB_DOMAIN (LITERAL1)

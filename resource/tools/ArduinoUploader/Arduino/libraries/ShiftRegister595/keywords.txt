@@ -1,0 +1,27 @@
+#######################################
+# Syntax Coloring Map For ShiftRegister
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ShiftRegister	KEYWORD1
+ShiftRegister595	KEYWORD1
+CascadingRegisters	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+buffer	KEYWORD2
+write	KEYWORD2
+attachRegister	KEYWORD2
+attachShiftRegister	KEYWORD2
+getNumberOfRegisters	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+

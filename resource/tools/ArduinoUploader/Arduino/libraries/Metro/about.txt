@@ -1,0 +1,7 @@
+VERSION 2.3.2
+
+¥ Added this->autoreset = 0; to Metro(unsigned long interval_millis) as suggested by Paul Bouchier
+
+VERSION 2.3.1
+
+¥ Updated for Arduino 1.0

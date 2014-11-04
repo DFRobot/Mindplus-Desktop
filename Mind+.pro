@@ -225,23 +225,11 @@ OTHER_FILES += \
 
 #macx:ICON = ./resource/images/icon/v095_logo_macx.icns
 #macx:ICON = v095_logo_macx.icns
-#linux:
-win32{
-MOC_DIR = _moc
-OBJECTS_DIR = _obj
-RCC_DIR = _rcc
-UI_DIR = _ui
-UI_HEADERS_DIR = _ui
-UI_SOURCES_DIR = _ui
-}else{
-#mac{
-#	QMAKE_INFO_PLIST = BBMaker.plist
-#	ICON = blockmaker.icns
-#}
-MOC_DIR = .moc
-OBJECTS_DIR = .obj
-RCC_DIR = .rcc
-UI_DIR = .ui
-UI_HEADERS_DIR = .ui
-UI_SOURCES_DIR = .ui
-}
+
+
+MOC_DIR = build/moc
+OBJECTS_DIR = build/obj
+RCC_DIR = build/rcc
+UI_DIR = build/ui
+UI_HEADERS_DIR = build/ui
+UI_SOURCES_DIR = build/ui

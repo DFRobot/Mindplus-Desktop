@@ -1052,7 +1052,7 @@ QGraphicsView
   <customwidget>
    <class>LoginInforWidget</class>
    <extends>QWidget</extends>
-   <header>logininforwidget.h</header>
+   <header>LoginInforWidget.h</header>
   </customwidget>
   <customwidget>
    <class>ListWidget</class>

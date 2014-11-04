@@ -32,196 +32,197 @@ TARGET = mp
 TEMPLATE = app
 
 #lessThan(QT_MAJOR_VERSION, 5):
-include(QExtserialport/qextserialport.pri)
-include(CompleteLineEdit.pri)
+include(libraries/QExtserialport/qextserialport.pri)
+include(libraries/CompleteLineEdit/CompleteLineEdit.pri)
 
-INCLUDEPATH += . \
-GraphicFramework/Item \
-GraphicFramework/Scene \
-GraphicFramework/View \
-Other \
-Other/Data \
-Uploader
+INCLUDEPATH += src \
+	libraries \
+	src/GraphicFramework/Item \
+	src/GraphicFramework/Scene \
+	src/GraphicFramework/View \
+	src/Other \
+	src/Other/Data \
+	src/Uploader
 
-SOURCES += main.cpp\
-	WidgetShowScene.cpp \
-	WidgetMain.cpp \
-	ListWidget.cpp \
-	ListWidgetItem.cpp \
-	FunctionArea.cpp \
-	GraphicFramework/Item/RootItem.cpp \
-	GraphicFramework/Item/ParameterItem.cpp \
-	GraphicFramework/Item/FlowLine.cpp \
-	GraphicFramework/Item/BehaviourItem.cpp \
-	GraphicFramework/Item/StartItem.cpp\
-	GraphicFramework/Scene/EditScene.cpp \
-	GraphicFramework/View/OperationsManagement.cpp \
-	Other/Data/DatabaseEditComponent.cpp \
-	Other/Data/DataBaseCreateComponent.cpp \
-	UploadSettingForm.cpp \
-	FunctionAreaWidget.cpp \
-	ListWidgetItemWidget_Component.cpp \
-	ListWidgetItemWidget_UploadSetting.cpp \
-	UploadWaitForm.cpp \
-	GraphicFramework/Item/GraphicsItemBase.cpp \
-	GraphicFramework/Item/GraphicsItermGroup.cpp \
-	PushButtonDone.cpp \
-	Animation.cpp \
-	FileInforForm.cpp \
-	ListWidgetItemWidget_Photo.cpp \
-	Label.cpp \
-	Parameter_Time_Form.cpp \
-	Parameter_Integer_Form.cpp \
-	GraphicFramework/Item/LockIconItem.cpp \
-	WidgetBackgroundRight.cpp \
-	Parameter_String_Form.cpp \
-	AllBlocksForm.cpp \
-	PushButtonBlock.cpp \
-	MindKitForm.cpp \
-	PushButtonMindKit.cpp \
-	Parameter_LED8x8_Form.cpp \
-	CustomFont.cpp \
-	PushButtonBase.cpp \
-	Other/Data/DataBaseHandle.cpp \
-	Other/Data/ResultsetBase.cpp \
-	Uploader/Uploader.cpp \
-	Uploader/Translate.cpp \
-	Uploader/ToolFactory.cpp \
-	Uploader/ToolBase.cpp \
-	Uploader/ArduinoUploader.cpp \
-	Uploader/DFRobotUploader.cpp \
-	Sleep.cpp \
-	LoginInforWidget.cpp \
-	IntroduceForm.cpp \
-	Parameter_AnalogPin_Form.cpp \
-	Parameter_DigitalPin_Form.cpp \
-	Parameter_operator_Form.cpp \
-	IntroduceFromRight.cpp \
-	MindKitPushButton.cpp \
-	UploadParameterWidget.cpp \
-	AffirmForm.cpp \
-	CallUpdateProgram.cpp \
-	Parameter_CurveProgression_Form.cpp \
-	CurveProgressionWidget.cpp \
-    SerialSettingWidget.cpp \
-    Other/Data/GetBlockData.cpp \
-    BlockMenuWidget.cpp \
-    ListWidgetAdvanceBlock.cpp \
-    WidgetForListWidgetBegin.cpp \
-    SerialPortToolForm.cpp \
-    SerialDataThread.cpp \
-    Param.cpp
+SOURCES += src/main.cpp\
+	src/WidgetShowScene.cpp \
+	src/WidgetMain.cpp \
+	src/ListWidget.cpp \
+	src/ListWidgetItem.cpp \
+	src/FunctionArea.cpp \
+	src/GraphicFramework/Item/RootItem.cpp \
+	src/GraphicFramework/Item/ParameterItem.cpp \
+	src/GraphicFramework/Item/FlowLine.cpp \
+	src/GraphicFramework/Item/BehaviourItem.cpp \
+	src/GraphicFramework/Item/StartItem.cpp\
+	src/GraphicFramework/Scene/EditScene.cpp \
+	src/GraphicFramework/View/OperationsManagement.cpp \
+	src/Other/Data/DatabaseEditComponent.cpp \
+	src/Other/Data/DataBaseCreateComponent.cpp \
+	src/UploadSettingForm.cpp \
+	src/FunctionAreaWidget.cpp \
+	src/ListWidgetItemWidget_Component.cpp \
+	src/ListWidgetItemWidget_UploadSetting.cpp \
+	src/UploadWaitForm.cpp \
+	src/GraphicFramework/Item/GraphicsItemBase.cpp \
+	src/GraphicFramework/Item/GraphicsItermGroup.cpp \
+	src/PushButtonDone.cpp \
+	src/Animation.cpp \
+	src/FileInforForm.cpp \
+	src/ListWidgetItemWidget_Photo.cpp \
+	src/Label.cpp \
+	src/Parameter_Time_Form.cpp \
+	src/Parameter_Integer_Form.cpp \
+	src/GraphicFramework/Item/LockIconItem.cpp \
+	src/WidgetBackgroundRight.cpp \
+	src/Parameter_String_Form.cpp \
+	src/AllBlocksForm.cpp \
+	src/PushButtonBlock.cpp \
+	src/MindKitForm.cpp \
+	src/PushButtonMindKit.cpp \
+	src/Parameter_LED8x8_Form.cpp \
+	src/CustomFont.cpp \
+	src/PushButtonBase.cpp \
+	src/Other/Data/DataBaseHandle.cpp \
+	src/Other/Data/ResultsetBase.cpp \
+	src/Uploader/Uploader.cpp \
+	src/Uploader/Translate.cpp \
+	src/Uploader/ToolFactory.cpp \
+	src/Uploader/ToolBase.cpp \
+	src/Uploader/ArduinoUploader.cpp \
+	src/Uploader/DFRobotUploader.cpp \
+	src/Sleep.cpp \
+	src/LoginInforWidget.cpp \
+	src/IntroduceForm.cpp \
+	src/Parameter_AnalogPin_Form.cpp \
+	src/Parameter_DigitalPin_Form.cpp \
+	src/Parameter_operator_Form.cpp \
+	src/IntroduceFromRight.cpp \
+	src/MindKitPushButton.cpp \
+	src/UploadParameterWidget.cpp \
+	src/AffirmForm.cpp \
+	src/CallUpdateProgram.cpp \
+	src/Parameter_CurveProgression_Form.cpp \
+	src/CurveProgressionWidget.cpp \
+    src/SerialSettingWidget.cpp \
+    src/Other/Data/GetBlockData.cpp \
+    src/BlockMenuWidget.cpp \
+    src/ListWidgetAdvanceBlock.cpp \
+    src/WidgetForListWidgetBegin.cpp \
+    src/SerialPortToolForm.cpp \
+    src/SerialDataThread.cpp \
+    src/Param.cpp
 
 HEADERS  += \
-	WidgetShowScene.h \
-	WidgetMain.h \
-	ListWidget.h \
-	ListWidgetItem.h \
-	FunctionArea.h \
-	GraphicFramework/Item/RootItem.h \
-	GraphicFramework/Item/ParameterItem.h \
-	GraphicFramework/Item/FlowLine.h \
-	GraphicFramework/Item/BehaviourItem.h \
-	GraphicFramework/Item/StartItem.h\
-	GraphicFramework/Scene/EditScene.h \
-	GraphicFramework/View/OperationsManagement.h \
-	Other/Data/DataStruct.h \
-	Other/Data/DatabaseEditComponent.h \
-	Other/Data/DataBaseCreateComponent.h \
-	UploadSettingForm.h \
-	FunctionAreaWidget.h \
-	ListWidgetItemWidget_Component.h \
-	ListWidgetItemWidget_UploadSetting.h \
-	UploadWaitForm.h \
-	GraphicFramework/Item/GraphicsItemBase.h \
-	GraphicFramework/Item/GraphicsItermGroup.h \
-	PushButtonDone.h \
-	Animation.h \
-	FileInforForm.h \
-	ListWidgetItemWidget_Photo.h \
-	Label.h \
-	Parameter_Time_Form.h \
-	Parameter_Integer_Form.h \
-	GraphicFramework/Item/LockIconItem.h \
-	WidgetBackgroundRight.h \
-	Parameter_String_Form.h \
-	AllBlocksForm.h \
-	PushButtonBlock.h \
-	MindKitForm.h \
-	PushButtonMindKit.h \
-	Parameter_LED8x8_Form.h \
-	CustomFont.h \
-	PushButtonBase.h \
-	Other/Data/DataBaseHandle.h \
-	Other/Data/ResultsetBase.h \
-	Uploader/Uploader.h \
-	Uploader/Translate.h \
-	Uploader/ToolsFactory.h \
-	Uploader/ToolBase.h \
-	Uploader/ArduinoUploader.h \
-	Uploader/DFRobotUploader.h \
-	Sleep.h \
-	LoginInforWidget.h \
-	IntroduceForm.h \
-	dptr.h \
-	Parameter_AnalogPin_Form.h \
-	Parameter_DigitalPin_Form.h \
-	Parameter_operator_Form.h \
-	IntroduceFromRight.h \
-	MindKitPushButton.h \
-	UploadParameterWidget.h \
-	AffirmForm.h \
-	CallUpdateProgram.h \
-	Parameter_CurveProgression_Form.h \
-	CurveProgressionWidget.h \
-    Common.h \
-    SerialSettingWidget.h \
-    Other/Data/GetBlockData.h \
-    BlockMenuWidget.h \
-    ListWidgetAdvanceBlock.h \
-    WidgetForListWidgetBegin.h \
-    SerialPortToolForm.h \
-    SerialDataThread.h \
-    Param.h
+	src/WidgetShowScene.h \
+	src/WidgetMain.h \
+	src/ListWidget.h \
+	src/ListWidgetItem.h \
+	src/FunctionArea.h \
+	src/GraphicFramework/Item/RootItem.h \
+	src/GraphicFramework/Item/ParameterItem.h \
+	src/GraphicFramework/Item/FlowLine.h \
+	src/GraphicFramework/Item/BehaviourItem.h \
+	src/GraphicFramework/Item/StartItem.h\
+	src/GraphicFramework/Scene/EditScene.h \
+	src/GraphicFramework/View/OperationsManagement.h \
+	src/Other/Data/DataStruct.h \
+	src/Other/Data/DatabaseEditComponent.h \
+	src/Other/Data/DataBaseCreateComponent.h \
+	src/UploadSettingForm.h \
+	src/FunctionAreaWidget.h \
+	src/ListWidgetItemWidget_Component.h \
+	src/ListWidgetItemWidget_UploadSetting.h \
+	src/UploadWaitForm.h \
+	src/GraphicFramework/Item/GraphicsItemBase.h \
+	src/GraphicFramework/Item/GraphicsItermGroup.h \
+	src/PushButtonDone.h \
+	src/Animation.h \
+	src/FileInforForm.h \
+	src/ListWidgetItemWidget_Photo.h \
+	src/Label.h \
+	src/Parameter_Time_Form.h \
+	src/Parameter_Integer_Form.h \
+	src/GraphicFramework/Item/LockIconItem.h \
+	src/WidgetBackgroundRight.h \
+	src/Parameter_String_Form.h \
+	src/AllBlocksForm.h \
+	src/PushButtonBlock.h \
+	src/MindKitForm.h \
+	src/PushButtonMindKit.h \
+	src/Parameter_LED8x8_Form.h \
+	src/CustomFont.h \
+	src/PushButtonBase.h \
+	src/Other/Data/DataBaseHandle.h \
+	src/Other/Data/ResultsetBase.h \
+	src/Uploader/Uploader.h \
+	src/Uploader/Translate.h \
+	src/Uploader/ToolsFactory.h \
+	src/Uploader/ToolBase.h \
+	src/Uploader/ArduinoUploader.h \
+	src/Uploader/DFRobotUploader.h \
+	src/Sleep.h \
+	src/LoginInforWidget.h \
+	src/IntroduceForm.h \
+	src/dptr.h \
+	src/Parameter_AnalogPin_Form.h \
+	src/Parameter_DigitalPin_Form.h \
+	src/Parameter_operator_Form.h \
+	src/IntroduceFromRight.h \
+	src/MindKitPushButton.h \
+	src/UploadParameterWidget.h \
+	src/AffirmForm.h \
+	src/CallUpdateProgram.h \
+	src/Parameter_CurveProgression_Form.h \
+	src/CurveProgressionWidget.h \
+    src/Common.h \
+    src/SerialSettingWidget.h \
+    src/Other/Data/GetBlockData.h \
+    src/BlockMenuWidget.h \
+    src/ListWidgetAdvanceBlock.h \
+    src/WidgetForListWidgetBegin.h \
+    src/SerialPortToolForm.h \
+    src/SerialDataThread.h \
+    src/Param.h
 
 FORMS    += \
-	WidgetMain.ui \
-	FunctionArea.ui \
-	UploadSettingForm.ui \
-	FunctionAreaWidget.ui \
-	ListWidgetItemWidget_UploadSetting.ui \
-	ListWidgetItemWidget_Component.ui \
-	UploadWaitForm.ui \
-	FileInforForm.ui \
-	ListWidgetItemWidget_Photo.ui \
-	Parameter_Time_Form.ui \
-	Parameter_Integer_Form.ui \
-	Parameter_String_Form.ui \
-	AllBlocksForm.ui \
-	MindKitForm.ui \
-	Parameter_LED8x8_Form.ui \
-	LoginInforWidget.ui \
-	IntroduceForm.ui \
-	Parameter_AnalogPin_Form.ui \
-	Parameter_DigitalPin_Form.ui \
-	Parameter_operator_Form.ui \
-	UploadParameterWidget.ui \
-	AffirmForm.ui \
-	Parameter_CurveProgression_Form.ui \
-    SerialSettingWidget.ui \
-    BlockMenuWidget.ui \
-    WidgetForListWidgetBegin.ui \
-    SerialPortToolForm.ui
+	ui/WidgetMain.ui \
+	ui/FunctionArea.ui \
+	ui/UploadSettingForm.ui \
+	ui/FunctionAreaWidget.ui \
+	ui/ListWidgetItemWidget_UploadSetting.ui \
+	ui/ListWidgetItemWidget_Component.ui \
+	ui/UploadWaitForm.ui \
+	ui/FileInforForm.ui \
+	ui/ListWidgetItemWidget_Photo.ui \
+	ui/Parameter_Time_Form.ui \
+	ui/Parameter_Integer_Form.ui \
+	ui/Parameter_String_Form.ui \
+	ui/AllBlocksForm.ui \
+	ui/MindKitForm.ui \
+	ui/Parameter_LED8x8_Form.ui \
+	ui/LoginInforWidget.ui \
+	ui/IntroduceForm.ui \
+	ui/Parameter_AnalogPin_Form.ui \
+	ui/Parameter_DigitalPin_Form.ui \
+	ui/Parameter_operator_Form.ui \
+	ui/UploadParameterWidget.ui \
+	ui/AffirmForm.ui \
+	ui/Parameter_CurveProgression_Form.ui \
+    ui/SerialSettingWidget.ui \
+    ui/BlockMenuWidget.ui \
+    ui/WidgetForListWidgetBegin.ui \
+    ui/SerialPortToolForm.ui
 
 
 RESOURCES += \
-	src.qrc
+	resource/images.qrc
 
 OTHER_FILES += \
 	大略文档.txt
 
 #现在不需要图标了
-#win32:RC_FILE = ico.rc
+#win32:RC_FILE = extra/ico.rc
 
 #macx:ICON = ./resource/images/icon/v095_logo_macx.icns
 #macx:ICON = v095_logo_macx.icns

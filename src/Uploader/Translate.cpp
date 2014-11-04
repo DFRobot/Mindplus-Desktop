@@ -128,7 +128,7 @@ void Translate::translateCode()
     int counter = 0;
 
 qDebug() << "------1-------";
-    QFile fileLinkage("Linkage.csv");
+    QFile fileLinkage("extra/Linkage.csv");
 
     if(!fileLinkage.open(QFile::ReadOnly))
     {
@@ -161,7 +161,7 @@ qDebug() << strs.size();
     fileLinkage.close();
     ///////////////////////////////////
     qDebug() << "------2-------";
-    QFile fileParameter("Parameter.csv");
+    QFile fileParameter("extra/Parameter.csv");
 
             if(!fileParameter.open(QFile::ReadOnly))
             {
@@ -194,7 +194,7 @@ qDebug() << strs.size();
     fileParameter.close();
     ///////////////////////////////////
     qDebug() << "-------3------";
-    QFile fileBB("BBList.csv");
+    QFile fileBB("extra/BBList.csv");
 
     if(!fileBB.open(QFile::ReadOnly))
     {

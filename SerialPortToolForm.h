@@ -28,6 +28,7 @@ private slots:
 
 private:
 	void initData();
+	void resetBaudRate(void);
 
 private:
 	QString baud_;
@@ -36,7 +37,6 @@ private:
 	bool bMindWrap_;
 	QextSerialPort *pSerialPort_;
 	QString buffer_;
-	QMap<int, BaudRateType> map_int_baud_;
 	SerialDataThread *pSerialDataThread_;
 };
 

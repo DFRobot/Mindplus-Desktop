@@ -44,28 +44,11 @@ void SerialPortToolForm::changeEvent(QEvent *e)
 
 void SerialPortToolForm::showEvent(QShowEvent *)
 {
-	comboBoxBaud->setCurrentIndex(3);
+	resetBaudRate();
 }
 
 void SerialPortToolForm::initData()
 {
-	{
-		map_int_baud_[110] = BAUD110;
-		map_int_baud_[300] = BAUD300;
-		map_int_baud_[600] = BAUD600;
-		map_int_baud_[1200] = BAUD1200;
-		map_int_baud_[2400] = BAUD2400;
-		map_int_baud_[4800] = BAUD4800;
-		map_int_baud_[9600] = BAUD9600;
-		map_int_baud_[19200] = BAUD19200;
-		map_int_baud_[38400] = BAUD38400;
-		map_int_baud_[57600] = BAUD57600;
-		map_int_baud_[115200] = BAUD115200;
-		map_int_baud_[128000] = BAUD128000;
-		map_int_baud_[250000] = BAUD250000;
-		map_int_baud_[256000] = BAUD256000;
-	}
-
 	textEditRead->setReadOnly(true);
 	QList<QextPortInfo> ports = QextSerialEnumerator::getPorts();
 	qDebug() << "没有货？？？" << ports.size();
@@ -94,15 +77,17 @@ void SerialPortToolForm::on_checkBoxMind_clicked(bool checked)
 	pSerialDataThread_ ->setMindWrap(bMindWrap_);
 }
 
-void SerialPortToolForm::on_comboBoxBaud_currentTextChanged(const QString &arg1)
+void SerialPortToolForm::on_comboBoxBaud_currentTextChanged(const QString &_baud)
 {
-	Q_UNUSED(arg1);
 	if(pSerialPort_->isOpen())
 	{
 		pSerialPort_->close();
 	}
-	//baud_ = arg1;
-	pSerialPort_->setBaudRate(map_int_baud_.value(baud_.toInt()));
+	/* As baud value is same a combo box value, directly reusing it.
+	 * TODO: platform specific only baud values to be addded.
+	 */
+	BaudRateType baud = static_cast<BaudRateType>(_baud.toInt());
+	pSerialPort_->setBaudRate(baud);
 	pSerialPort_->setPortName(comboBoxPort->currentText());
 	pSerialPort_->open(QIODevice::ReadWrite);
 	if(!pSerialPort_->isOpen())
@@ -118,6 +103,14 @@ void SerialPortToolForm::on_comboBoxPort_currentIndexChanged(const QString &arg1
 	Q_UNUSED(arg1);
 	if(pSerialPort_)
 	{
-		on_comboBoxBaud_currentTextChanged("");
+		resetBaudRate();
 	}
+}
+
+/*
+ * reset baud value to default [9600]
+ */
+void SerialPortToolForm::resetBaudRate(void)
+{
+	comboBoxBaud->setCurrentIndex(3);
 }
